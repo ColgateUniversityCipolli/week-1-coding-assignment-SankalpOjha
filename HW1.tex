@@ -125,7 +125,7 @@
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-3-1} 
 \end{knitrout}
-\caption{A caption...}
+\caption{Dry Grass}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -151,7 +151,7 @@
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{figure/unnamed-chunk-4-1} 
 \end{knitrout}
-\caption{A caption...}
+\caption{Longer Dry Grass}
 \label{CollatzPlot2}
 \end{center}
 \end{figure}
@@ -171,17 +171,27 @@
   (note this is the default).
   \end{itemize}
 \textbf{Solution:}
-
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{canvas_collatz}\hldef{(}
+  \hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"vrolik4"}\hldef{),}
+  \hlkwc{background} \hldef{=} \hlsng{"#dbdbdb"}\hldef{,}
+  \hlkwc{n} \hldef{=} \hlnum{72}\hldef{,}
+  \hlkwc{angle.even} \hldef{=} \hlnum{0.0145}\hldef{,}
+  \hlkwc{angle.odd} \hldef{=} \hlopt{-}\hlnum{0.05}
+\hldef{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
 %Code to insert a figure [H]ere
 \begin{figure}[H]
 \begin{center}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in parse(text = input): <text>:1:1: unexpected input\\\#\# 1: <<\\\#\# \ \ \ \ \textasciicircum{}}}\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-5-1} 
 \end{knitrout}
-\caption{A caption...}
+\caption{Almost Circle}
 \label{CollatzPlot3}
 \end{center}
 \end{figure}
@@ -192,14 +202,38 @@
   Note that I leave creating the R chunk and figure environment to you here. 
   Make sure that your code is well-formatted and your plot is appropriately scaled.\\
   \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{canvas_collatz}\hldef{(}
+  \hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"vrolik4"}\hldef{),}
+  \hlkwc{background} \hldef{=} \hlsng{"#dbfada"}\hldef{,}
+  \hlkwc{n} \hldef{=} \hlnum{37}\hldef{,}
+  \hlkwc{angle.even} \hldef{=} \hlnum{0.74}\hldef{,}
+  \hlkwc{angle.odd} \hldef{=} \hlopt{-}\hlnum{0.075}
+\hldef{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+%Code to insert a figure [H]ere
+\begin{figure}[H]
+\begin{center}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-6-1} 
+\end{knitrout}
+\caption{Swirls}
+\label{CollatzPlot4}
+\end{center}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Use \texttt{citation()} to get the BiBTeX citation for the \texttt{aRtsy}
   package and use \verb|\citep{}| to add a parenthetical citation to the end of
-  the sentence below.
+  the sentence below. \\
 \textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
-package for \texttt{R}.
+package for \texttt{R} \citep{aRtsy}.
 \end{enumerate}
 
 \newpage
@@ -216,27 +250,56 @@ package for \texttt{R}.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Create a numeric vector containing the integers from 0 to 10 inclusive. Hint -- the solution to this problem is one of these values.\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{x} \hlkwb{<-} \hlkwd{seq}\hldef{(}\hlkwc{from} \hldef{=} \hlnum{0}\hldef{,} \hlkwc{to} \hldef{=} \hlnum{10}\hldef{,} \hlkwc{by} \hldef{=} \hlnum{1}\hldef{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2b
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{x} \hlkwb{<-} \hlkwd{seq}\hldef{(}\hlkwc{from} \hldef{=} \hlnum{0}\hldef{,} \hlkwc{to} \hldef{=} \hlnum{10}\hldef{,} \hlkwc{by} \hldef{=} \hlnum{1}\hldef{)}
+\hldef{eq} \hlkwb{<-} \hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{+}\hlnum{1}\hldef{\}}\hlopt{+}\hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{-}\hlnum{1}\hldef{\}}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2c
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Use the which() function to ask which result is 40.\\
 \textbf{Solution:}
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{x} \hlkwb{<-} \hlkwd{seq}\hldef{(}\hlkwc{from} \hldef{=} \hlnum{0}\hldef{,} \hlkwc{to} \hldef{=} \hlnum{10}\hldef{,} \hlkwc{by} \hldef{=} \hlnum{1}\hldef{)}
+\hldef{eq} \hlkwb{<-} \hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{+}\hlnum{1}\hldef{\}}\hlopt{+}\hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{-}\hlnum{1}\hldef{\}}
+\hlkwd{which}\hldef{(eq}\hlopt{==}\hlnum{40}\hldef{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
-\textbf{Solution:}
+\textbf{Solution:} The fifth element in the vector is the solution which means x must equal 4 (x = 4) for the equation to equal 40.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
-\textbf{Solution:}
+\textbf{Solution:} As 1.6309 is \textbf{NOT} an integer, the method used earlier will fail for this question as 1.6309 is not a value in the vector.
 \end{enumerate}
 \end{enumerate}
+
+\bibliography{bibliography.bib}
 
 \end{document}
