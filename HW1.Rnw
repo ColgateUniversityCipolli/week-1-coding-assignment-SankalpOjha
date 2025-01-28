@@ -172,7 +172,7 @@ package for \texttt{R} \citep{aRtsy}.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Create a numeric vector containing the integers from 0 to 10 inclusive. Hint -- the solution to this problem is one of these values.\\
 \textbf{Solution:}
-<<eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+<<eval=TRUE, size="scriptsize", warning=FALSE, message=FALSE>>=
 x <- seq(from = 0, to = 10, by = 1)
 @
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,7 +181,9 @@ x <- seq(from = 0, to = 10, by = 1)
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
 <<eval=TRUE, size="scriptsize", warning=FALSE, message=FALSE>>=
-x <- seq(from = 0, to = 10, by = 1)
+#Code run in Question 2 Part A
+#x <- seq(from = 0, to = 10, by = 1)
+
 eq <- 2^{x+1}+2^{x-1}
 @
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -190,20 +192,24 @@ eq <- 2^{x+1}+2^{x-1}
   \item Use the which() function to ask which result is 40.\\
 \textbf{Solution:}
 <<eval=TRUE, size="scriptsize", warning=FALSE, message=FALSE>>=
-x <- seq(from = 0, to = 10, by = 1)
-eq <- 2^{x+1}+2^{x-1}
+#Code run in Question 2 Part A
+#x <- seq(from = 0, to = 10, by = 1)
+
+#Code run in Question 2 Part B
+#eq <- 2^{x+1}+2^{x-1}
+
 which(eq==40)
 @
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
-\textbf{Solution:} The fifth element in the vector is the solution which means x must equal 4 (x = 4) for the equation to equal 40.
+\textbf{Solution:} The \Sexpr{which(eq==40)}th element in the vector is the solution which means x must equal \Sexpr{x[which(eq==40)]} (x = 4) for the equation to equal 40.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
-\textbf{Solution:} As 1.6309 is \textbf{NOT} an integer, the method used earlier will fail for this question as 1.6309 is not a value in the vector.
+\textbf{Solution:} As 1.6309 is \underline{\textbf{NOT}} an integer! The method used earlier will fail for this question as 1.6309 is \underline{\textbf{NOT}} a value in the vector.
 \end{enumerate}
 \end{enumerate}
 

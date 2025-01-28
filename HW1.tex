@@ -265,7 +265,9 @@ package for \texttt{R} \citep{aRtsy}.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hldef{x} \hlkwb{<-} \hlkwd{seq}\hldef{(}\hlkwc{from} \hldef{=} \hlnum{0}\hldef{,} \hlkwc{to} \hldef{=} \hlnum{10}\hldef{,} \hlkwc{by} \hldef{=} \hlnum{1}\hldef{)}
+\hlcom{#Code run in Question 2 Part A}
+\hlcom{#x <- seq(from = 0, to = 10, by = 1)}
+
 \hldef{eq} \hlkwb{<-} \hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{+}\hlnum{1}\hldef{\}}\hlopt{+}\hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{-}\hlnum{1}\hldef{\}}
 \end{alltt}
 \end{kframe}
@@ -278,8 +280,12 @@ package for \texttt{R} \citep{aRtsy}.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hldef{x} \hlkwb{<-} \hlkwd{seq}\hldef{(}\hlkwc{from} \hldef{=} \hlnum{0}\hldef{,} \hlkwc{to} \hldef{=} \hlnum{10}\hldef{,} \hlkwc{by} \hldef{=} \hlnum{1}\hldef{)}
-\hldef{eq} \hlkwb{<-} \hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{+}\hlnum{1}\hldef{\}}\hlopt{+}\hlnum{2}\hlopt{^}\hldef{\{x}\hlopt{-}\hlnum{1}\hldef{\}}
+\hlcom{#Code run in Question 2 Part A}
+\hlcom{#x <- seq(from = 0, to = 10, by = 1)}
+
+\hlcom{#Code run in Question 2 Part B}
+\hlcom{#eq <- 2^\{x+1\}+2^\{x-1\}}
+
 \hlkwd{which}\hldef{(eq}\hlopt{==}\hlnum{40}\hldef{)}
 \end{alltt}
 \begin{verbatim}
@@ -291,12 +297,12 @@ package for \texttt{R} \citep{aRtsy}.
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
-\textbf{Solution:} The fifth element in the vector is the solution which means x must equal 4 (x = 4) for the equation to equal 40.
+\textbf{Solution:} The 5th element in the vector is the solution which means x must equal 4 (x = 4) for the equation to equal 40.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
-\textbf{Solution:} As 1.6309 is \textbf{NOT} an integer, the method used earlier will fail for this question as 1.6309 is not a value in the vector.
+\textbf{Solution:} As 1.6309 is \underline{\textbf{NOT}} an integer! The method used earlier will fail for this question as 1.6309 is \underline{\textbf{NOT}} a value in the vector.
 \end{enumerate}
 \end{enumerate}
 
