@@ -131,7 +131,7 @@ canvas_collatz(
   \textbf{Solution:}
 <<CollatzPlot4, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
 canvas_collatz(
-  colors = colorPalette("vrolik4"),
+  colors = colorPalette("retro4"),
   background = "#dbfada",
   n = 37,
   angle.even = 0.74,
